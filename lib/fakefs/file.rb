@@ -224,11 +224,11 @@ module FakeFS
       return RealFile.split(path)
     end
 
-    def self.fnmatch(pattern, path, flags = nil)
+    def self.fnmatch(pattern, path, flags = 0)
       RealFile.fnmatch(pattern, path, flags)
     end
 
-    def self.fnmatch?(pattern, path, flags = nil)
+    def self.fnmatch?(pattern, path, flags = 0)
       fnmatch(pattern, path, flags)
     end
 
