@@ -224,6 +224,14 @@ module FakeFS
       return RealFile.split(path)
     end
 
+    def self.fnmatch(pattern, path, flags = nil)
+      RealFile.fnmatch(pattern, path, flags)
+    end
+
+    def self.fnmatch?(pattern, path, flags = nil)
+      fnmatch(pattern, path, flags)
+    end
+
     class Stat
       attr_reader :ctime, :mtime
 
